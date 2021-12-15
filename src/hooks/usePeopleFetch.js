@@ -7,11 +7,13 @@ export const usePeopleFetch = (checkedCountries) => {
 
   let fetchStr = `https://randomuser.me/api/?results=25&page=1`
   let fetchFilter = ''
-  for (let [key,value] of Object.entries(checkedCountries)){
+
+  Object.entries(checkedCountries).forEach(([key, value]) => {
     if(value){
       fetchFilter += key.toLowerCase() + ','
     }
-  }
+  })
+  
   if(fetchFilter.length > 0){
     fetchFilter = fetchFilter.slice(0, -1)
     fetchFilter = '&nat=' + fetchFilter

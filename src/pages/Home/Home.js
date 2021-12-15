@@ -16,7 +16,7 @@ const Home = () => {
     "US": false
   });
 
-  const handleCheckCounty = (value) => {
+  const handleCheckCountry = (value) => {
     checkedCountries[value] = !checkedCountries[value];
     setCheckedCountries({ ...checkedCountries });
   };
@@ -32,11 +32,11 @@ const Home = () => {
           </Text>
         </S.Header>
         <S.Filters>
-          <CheckBox value="BR" label="Brazil" onChange={handleCheckCounty} />
-          <CheckBox value="AU" label="Australia" onChange={handleCheckCounty} />
-          <CheckBox value="CA" label="Canada" onChange={handleCheckCounty} />
-          <CheckBox value="DE" label="Germany" onChange={handleCheckCounty} />
-          <CheckBox value="US" label="United States" onChange={handleCheckCounty} />
+          <CheckBox value="BR" label="Brazil" onChange={handleCheckCountry} />
+          <CheckBox value="AU" label="Australia" onChange={handleCheckCountry} />
+          <CheckBox value="CA" label="Canada" onChange={handleCheckCountry} />
+          <CheckBox value="DE" label="Germany" onChange={handleCheckCountry} />
+          <CheckBox value="US" label="United States" onChange={handleCheckCountry} />
         </S.Filters>
         <UserList users={users} isLoading={isLoading} />
       </S.Content>
