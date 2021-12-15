@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Home = styled.div`
+export const Favorites = styled.div`
   display: flex;
   height: 100vh;
   align-items: center;
@@ -27,12 +27,4 @@ export const Form = styled.div`
   gap: 25px;
   max-width: 400px;
   width: 100%;
-`;
-
-export const Filters = styled.div`
-  display: flex;
-  justify-content: center;
-  & > * {
-    margin-inline-end: 8px;
-  }
 `;
